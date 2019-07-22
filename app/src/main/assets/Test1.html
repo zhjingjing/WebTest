@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<br>
+<meta charset="utf-8">
+<title>My_Hello</title>
+    <script>
+       function callJS(){
+          alert("Android调用了JS的callJS方法");
+       }
+        function callJS2(){
+            return "Android调用了JS的callJS方法";
+        }
+    function callAndroid(){
+        console.log(window.Native.getToken());
+        window.Native.showToast("这里是js传给你的值");
+    }
+    </script>
+        <button  type="button" id="button1" onclick="callAndroid()" >获取token</button>
+        <br>
+        <a href="webtest://native/param?id=123"> new Activity</a>
+        <br>
+        <a href="http://www.baidu.com">open http link</a>
+        <br>
+        <a href="file:///android_asset/Test2.html">open local file</a>
+</head>
+</html>
